@@ -1,4 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint, url_for
+from werkzeug.utils import redirect
+
 # __name__ is the main_views
 # main is the alais, this will be used in url_for in the future
 # url_prefix means what hello_pybo will call this time it will call localhost:5000/
@@ -12,7 +14,6 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
-    return 'Pybo index'
-
+    return redirect(url_for('question._list'))
 # 라우팅 함수가 추가되더라도 main_view에 추가하기때문에 create_app이 안 뚱뚱해짐
 # Gonna add routing functions on main_views so create_app will not be fat
