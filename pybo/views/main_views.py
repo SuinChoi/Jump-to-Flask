@@ -1,6 +1,8 @@
 from flask import Blueprint, url_for
 from werkzeug.utils import redirect
 
+
+
 # __name__ is the main_views
 # main is the alais, this will be used in url_for in the future
 # url_prefix means what hello_pybo will call this time it will call localhost:5000/
