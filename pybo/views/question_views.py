@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
-from pybo.models import Question
-from pybo.forms import QuestionForm
+from ..forms import QuestionForm  # '..'를 사용하여 부모 패키지로 이동
+from ..models import Question
+
 
 bp = Blueprint('question', __name__, url_prefix='/question')
 @bp.route('/list/')
